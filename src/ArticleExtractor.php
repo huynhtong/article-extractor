@@ -328,12 +328,12 @@ class ArticleExtractor {
       $text = $readability->getContent();
 
 			// Replace all <h*> and </h*> tags with newlines
-			$text = preg_replace ('/<h[1-6]>/', "\n", $text);
-			$text = preg_replace ('/<\/h[1-6]>/', "\n", $text);
-			$text = preg_replace ('/<p>/', "\n", $text);
-			$text = preg_replace ('/<\/p>/', "\n", $text);
+			//$text = preg_replace ('/<h[1-6]>/', "\n", $text);
+			//$text = preg_replace ('/<\/h[1-6]>/', "\n", $text);
+			//$text = preg_replace ('/<p>/', "\n", $text);
+			//$text = preg_replace ('/<\/p>/', "\n", $text);
 
-      $text = strip_tags($text); // Remove all HTML tags
+      //$text = strip_tags($text); // Remove all HTML tags
       $text = html_entity_decode($text); // Make sure we have no HTML entities left over
 
 			$text = str_replace("\t", " ", $text); // Replace tabs with spaces
